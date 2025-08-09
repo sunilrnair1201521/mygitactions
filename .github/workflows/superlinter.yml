@@ -3,15 +3,15 @@ name: Super-Linter
 on: push
 
 jobs:
-  super-limit:
-    name: Limit code base
+  super-lint:
+    name: Lint code base
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
 
       - name: Run Super-Linter
-        uses: super-linter/super-linter@v3 # Use the latest version of Super Linter
+        uses: GitHub/super-linter@v3
         env:
-          DEFAULT_BRANCH: main # Or your default branch name
+          DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
