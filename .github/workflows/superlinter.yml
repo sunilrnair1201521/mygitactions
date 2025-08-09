@@ -9,13 +9,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
-      - name: Setup PHP
-            uses:Administrator/setup-php@v2
-            with:php-version:'8.2'
-                  extensions:mbstring,pdo_mysql,zip
-                  tools:composer
-              
+                 
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
