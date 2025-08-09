@@ -1,0 +1,17 @@
+name: Super-Linter
+
+on: push
+
+jobs:
+  super-limit:
+    name: Limit code base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Run Super-Linter
+        uses: super-linter/super-linter@v3 # Use the latest version of Super Linter
+        env:
+          DEFAULT_BRANCH: main # Or your default branch name
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
