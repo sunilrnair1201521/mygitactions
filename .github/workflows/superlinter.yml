@@ -9,10 +9,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Setup PHP
-        uses: action/setup-php@v2
                  
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+          PHP_EXTENSIONS: json, mbstring, simplexml, sodium, odbc, pdo_odbc, mysqli, pdo_mysql, pgsql, pdo_pgsql, sqlite3, pdo_sqlite, sqlsrv, pdo_sqlsrv, pdo_firebird
+          PHP_INI_VALUES: memory_limit=-1, error_reporting=-1, display_errors=On    
