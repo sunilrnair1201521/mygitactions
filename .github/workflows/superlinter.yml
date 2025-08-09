@@ -12,10 +12,9 @@ jobs:
         
       - name: Setup PHP
             uses:Administrator/setup-php@v2
-            with:
-              php-version: '8.2' # Specify your desired PHP version
-              extensions: mbstring, pdo_mysql, zip
-              tools: composer
+            with:php-version:'8.2'
+                  extensions:mbstring,pdo_mysql,zip
+                  tools:composer
               
         env:
           DEFAULT_BRANCH: main
