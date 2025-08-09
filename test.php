@@ -5,5 +5,5 @@
     echo "Hello, World! 4";
     echo "asdfsa";
     echo "asdfsa changed data";
-    ec asdasdfasasdfsa";
+    echo "asdasdfasasdfsa";
     ?>
