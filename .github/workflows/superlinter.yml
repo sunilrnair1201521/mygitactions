@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - uses: sunilrnair1201521/setup-php@v2
+      - uses: shivammathur/setup-php@v2
         name: Setup PHP
         with:
            php-version: '8.2'
