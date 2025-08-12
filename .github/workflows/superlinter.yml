@@ -16,7 +16,10 @@ jobs:
              extensions: mbstring, pdo_mysql
              ini-values: post_max_size=256M
              tools: composer, phpunit
-        
+    runtime: php
+    runtime_config: 
+       operating_system: ubuntu22
+       document_root: .
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
