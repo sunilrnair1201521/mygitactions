@@ -3,7 +3,6 @@ name: Super-Linter-Code
 on: push
 
 jobs:
-  
   super-lint:
     name: Lint code base
     runs-on: ubuntu-latest
@@ -17,9 +16,13 @@ jobs:
              extensions: mbstring, pdo_mysql
              ini-values: post_max_size=256M
              tools: composer, phpunit
-          
+                
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PHP_EXTENSIONS: json, mbstring, simplexml, sodium, odbc, pdo_odbc, mysqli, pdo_mysql, pgsql, pdo_pgsql, sqlite3, pdo_sqlite, sqlsrv, pdo_sqlsrv, pdo_firebird
           PHP_INI_VALUES: memory_limit=-1, error_reporting=-1, display_errors=On
+          MYSQL_ROOT_PASSWORD: Sunilrnair!37
+          MYSQL_DATABASE: sunilnewDatabase
+          MYSQL_USER: suniluser
+          MYSQL_PASSWORD: Sunilrnair!37
